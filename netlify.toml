@@ -1,0 +1,93 @@
+# Configuration Netlify optimisée pour les performances
+# SabyDigital - Artisans Île-de-France
+
+# Configuration du build
+[build]
+  publish = "."
+  command = "echo 'Site statique - pas de build nécessaire'"
+
+# Headers personnalisés pour la sécurité et les performances
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Sécurité
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    
+    # Cache par défaut (1 heure)
+    Cache-Control = "public, max-age=3600, s-maxage=3600"
+
+# Cache long pour les ressources statiques (1 an)
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache court pour le HTML (1 heure)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Cache du Service Worker (pas de cache)
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Service-Worker-Allowed = "/"
+
+# Redirections 301 (SEO)
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+  force = true
+
+# Page 404 personnalisée
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Compression Brotli (activée par défaut sur Netlify)
+# Pas de configuration nécessaire, Netlify compresse automatiquement
+
+# Plugin Netlify pour optimisation des images
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  
+  [plugins.inputs.thresholds]
+    performance = 0.8
+    accessibility = 0.9
+    best-practices = 0.9
+    seo = 0.9
+
+# Préchargement des ressources critiques
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = '''
+    </css/style.css>; rel=preload; as=style,
+    </js/main.js>; rel=preload; as=script,
+    </images/logo-sabydigital.png>; rel=preload; as=image,
+    </images/hero-artisan-idf-optimized.jpg>; rel=preload; as=image
+    '''

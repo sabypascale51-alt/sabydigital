@@ -61,31 +61,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modern-design.css">
-    <link rel="stylesheet" href="css/responsive-fix.css">
-    <link rel="stylesheet" href="css/logo-colors.css">
-    <link rel="stylesheet" href="css/burger-menu.css">
+    <!-- Critical CSS Inline (Performance: FCP < 1.8s) -->
+    <style>
+    /* Reset & Base */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,sans-serif;line-height:1.6;color:#1e293b;background:#fff;overflow-x:hidden}
+    /* Header */
+    .header-modern{position:fixed;top:0;left:0;width:100%;z-index:1000;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);transition:all .3s ease;padding:16px 0}
+    .header-modern.scrolled{padding:12px 0;box-shadow:0 4px 20px rgba(0,0,0,.1)}
+    .header-container{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+    .logo-modern{display:flex;align-items:center;gap:12px;text-decoration:none;transition:transform .3s ease}
+    .logo-modern img{height:50px;width:auto}
+    .logo-text{font-size:1.5rem;font-weight:700;color:#1e293b}
+    .logo-text span{color:#1e3a8a}
+    /* Nav Desktop */
+    .nav-desktop{display:flex;gap:32px;align-items:center}
+    .nav-desktop a{text-decoration:none;color:#475569;font-weight:500;font-size:1rem;transition:color .3s ease}
+    .nav-desktop a:hover{color:#1e3a8a;transform:translateY(-2px)}
+    .nav-desktop .cta-button{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);color:#fff;padding:12px 24px;border-radius:8px;font-weight:600}
+    /* Burger */
+    .burger-icon{display:none;background:transparent;border:none;cursor:pointer;padding:8px;width:44px;height:44px;position:relative;z-index:1001}
+    .burger-bar{width:28px;height:3px;background:#1e3a8a;display:block;transition:all .3s ease;position:absolute;left:8px}
+    .burger-bar:nth-child(1){top:12px}
+    .burger-bar:nth-child(2){top:20px}
+    .burger-bar:nth-child(3){top:28px}
+    /* Hero */
+    .hero-modern{min-height:100vh;display:flex;align-items:center;padding:120px 24px 60px;background:linear-gradient(135deg,#f8fafc 0%,#e0f2fe 100%);position:relative;overflow:hidden}
+    .hero-container{max-width:1400px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .hero-content h1{font-size:3rem;line-height:1.2;color:#1e293b;margin-bottom:24px;font-weight:800}
+    .hero-content .highlight{background:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:#dbeafe;color:#1e3a8a;padding:8px 16px;border-radius:24px;font-size:.875rem;font-weight:600;margin-bottom:16px}
+    .hero-visual-modern{position:relative}
+    .visual-container{border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+    .visual-container img,.visual-container picture img{width:100%;height:auto;display:block;object-fit:cover}
+    /* Responsive */
+    @media(max-width:991px){.nav-desktop{display:none}.burger-icon{display:block}.hero-container{grid-template-columns:1fr;gap:40px}.hero-content h1{font-size:2rem}}
+    @media(max-width:480px){.header-modern{padding:12px 0}.logo-modern img{height:40px}.hero-content h1{font-size:1.75rem}}
+    </style>
     
     <!-- Preload Critical Resources (Performance) -->
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="preload" href="css/modern-design.css" as="style">
-    <link rel="preload" href="js/main.js" as="script">
     <link rel="preload" href="images/logo-sabydigital.png" as="image">
+    <link rel="preload" href="images/hero-artisan-idf-optimized.jpg" as="image">
     
-    <!-- Google Analytics 4 -->
-    <!-- Remplacez G-XXXXXXXXXX par votre ID de mesure Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Chargement asynchrone des CSS non-critiques -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+    (function(){var s=['css/style.css','css/modern-design.css','css/responsive-fix.css','css/logo-colors.css','css/burger-menu.css','css/faq-moderne.css','https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css'];function l(h){var k=document.createElement('link');k.rel='stylesheet';k.href=h;k.media='print';k.onload=function(){this.media='all'};document.head.appendChild(k)}s.forEach(l)})();
     </script>
+    <noscript>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/modern-design.css">
+        <link rel="stylesheet" href="css/responsive-fix.css">
+        <link rel="stylesheet" href="css/logo-colors.css">
+        <link rel="stylesheet" href="css/burger-menu.css">
+        <link rel="stylesheet" href="css/faq-moderne.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    </noscript>
     
     <!-- Schema.org LocalBusiness (SEO Rich Snippets) -->
     <script type="application/ld+json">
@@ -395,7 +425,12 @@
                 <!-- Modern Visual -->
                 <div class="hero-visual-modern">
                     <div class="visual-container">
-                        <img src="images/hero-modern-ai.jpg" alt="SabyDigital - Intelligence Artificielle et Création Web" loading="eager">
+                        <img src="images/hero-artisan-idf-optimized.jpg" 
+                             alt="Artisan Île-de-France avec site web professionnel - Visibilité Google locale" 
+                             loading="eager" 
+                             fetchpriority="high"
+                             width="1365" 
+                             height="768">
                     </div>
                     
                     <!-- Floating Info Cards -->
@@ -1738,6 +1773,26 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script src="js/burger-menu.js"></script>
+    
+    <!-- Enregistrement du Service Worker pour le cache -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('Service Worker enregistré:', registration.scope))
+                    .catch(error => console.log('Erreur Service Worker:', error));
+            });
+        }
+    </script>
+    
+    <!-- Google Analytics 4 (Chargé après le contenu pour ne pas bloquer le rendu) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 
 </body>
 </html>
