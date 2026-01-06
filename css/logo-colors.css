@@ -1,0 +1,331 @@
+/**
+ * SABYDIGITAL - COULEURS PERSONNALISÉES LOGO
+ * Bleu principal : #1e3a8a (bleu foncé du logo)
+ * Bleu secondaire : #2563eb (bleu moyen)
+ * Noir : #000000 (noir du logo)
+ * Blanc : #ffffff
+ */
+
+:root {
+    /* Couleurs principales du logo */
+    --logo-blue-dark: #1e3a8a;
+    --logo-blue-medium: #2563eb;
+    --logo-black: #000000;
+    --logo-white: #ffffff;
+    
+    /* Mise à jour des variables existantes */
+    --primary-blue: #1e3a8a;
+    --primary-blue-light: #2563eb;
+    --primary-orange: #1e3a8a; /* Remplace l'orange par le bleu */
+    --primary-orange-light: #2563eb; /* Remplace l'orange clair par le bleu moyen */
+    
+    /* Couleurs de texte */
+    --dark: #000000;
+    --dark-light: #1e3a8a;
+    --gray: #6b7280;
+    --gray-light: #9ca3af;
+    --light-gray: #f3f4f6;
+    --white: #ffffff;
+    
+    /* Gradients avec couleurs du logo */
+    --gradient-blue: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    --gradient-dark: linear-gradient(135deg, #000000 0%, #1e3a8a 100%);
+}
+
+/* Header avec couleurs du logo */
+.header {
+    background: var(--logo-white);
+    border-bottom: 2px solid var(--logo-blue-dark);
+}
+
+.header.scrolled {
+    background: var(--logo-white);
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+}
+
+/* Navigation */
+.nav-link {
+    color: var(--logo-black);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--logo-blue-dark);
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--logo-black);
+}
+
+.section-title {
+    color: var(--logo-black);
+}
+
+.gradient-text {
+    background: var(--gradient-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Boutons */
+.btn-primary {
+    background: var(--gradient-blue);
+    color: var(--logo-white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--logo-blue-dark);
+    border: 2px solid var(--logo-blue-dark);
+}
+
+.btn-secondary:hover {
+    background: var(--logo-blue-dark);
+    color: var(--logo-white);
+}
+
+/* CTA Flottant */
+.cta-float {
+    background: var(--gradient-blue);
+    color: var(--logo-white);
+}
+
+.cta-float:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.4);
+}
+
+/* Widget WhatsApp - adapter aux couleurs du logo */
+.whatsapp-widget {
+    background: var(--gradient-blue);
+}
+
+.whatsapp-widget:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.4);
+}
+
+/* Services Cards */
+.service-card {
+    border: 2px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--logo-blue-dark);
+    box-shadow: 0 12px 32px rgba(30, 58, 138, 0.15);
+    transform: translateY(-8px);
+}
+
+.service-card.featured {
+    border-color: var(--logo-blue-dark);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+}
+
+.service-icon {
+    background: var(--gradient-blue);
+    color: var(--logo-white);
+}
+
+.price {
+    color: var(--logo-blue-dark);
+}
+
+/* Portfolio */
+.portfolio-category {
+    background: var(--gradient-blue);
+    color: var(--logo-white);
+}
+
+.portfolio-tags .tag {
+    background: rgba(30, 58, 138, 0.1);
+    color: var(--logo-blue-dark);
+}
+
+.portfolio-tags .tag:hover {
+    background: var(--logo-blue-dark);
+    color: var(--logo-white);
+}
+
+/* FAQ */
+.faq-question {
+    color: var(--logo-black);
+}
+
+.faq-question:hover {
+    color: var(--logo-blue-dark);
+}
+
+.faq-item.active .faq-question {
+    color: var(--logo-blue-dark);
+}
+
+.faq-question i {
+    color: var(--logo-blue-dark);
+}
+
+/* Footer */
+.footer {
+    background: var(--logo-black);
+    color: var(--logo-white);
+}
+
+.footer h4 {
+    color: var(--logo-white);
+}
+
+.footer a {
+    color: var(--logo-white);
+}
+
+.footer a:hover {
+    color: var(--logo-blue-medium);
+}
+
+.social-links a {
+    background: var(--logo-blue-dark);
+    color: var(--logo-white);
+}
+
+.social-links a:hover {
+    background: var(--logo-blue-medium);
+    transform: translateY(-3px);
+}
+
+/* Scroll to Top */
+.scroll-to-top {
+    background: var(--gradient-blue);
+}
+
+.scroll-to-top:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+    transform: translateY(-3px);
+}
+
+/* Stats & Numbers */
+.stat-number,
+.ai-stat-number {
+    color: var(--logo-blue-dark);
+}
+
+/* Badges */
+.hero-badge,
+.ai-badge,
+.quiz-badge {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+    border: 2px solid var(--logo-blue-dark);
+    color: var(--logo-blue-dark);
+}
+
+/* Links */
+a {
+    color: var(--logo-blue-dark);
+}
+
+a:hover {
+    color: var(--logo-blue-medium);
+}
+
+/* Form Inputs Focus */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--logo-blue-dark);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* Checkbox checked */
+input[type="checkbox"]:checked {
+    background-color: var(--logo-blue-dark);
+    border-color: var(--logo-blue-dark);
+}
+
+/* Progress Bar (Quiz) */
+.progress-fill {
+    background: var(--gradient-blue);
+}
+
+/* Quiz Results */
+.results-badge {
+    background: var(--gradient-blue);
+    color: var(--logo-white);
+}
+
+.recommendation-card {
+    border: 2px solid #e5e7eb;
+}
+
+.recommendation-card:hover {
+    border-color: var(--logo-blue-dark);
+    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.15);
+}
+
+.recommendation-card.priority {
+    border-color: var(--logo-blue-dark);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+}
+
+/* Icons */
+.fas, .far, .fab {
+    color: inherit;
+}
+
+/* Hero Background avec couleurs du logo */
+.hero-background::before {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(37, 99, 235, 0.1) 100%);
+}
+
+/* Comparaison Table */
+.comparison-col.highlight {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+    color: var(--logo-blue-dark);
+    font-weight: 600;
+}
+
+/* AI Creation Section */
+.ai-advantage-card:hover {
+    border-color: var(--logo-blue-dark);
+    box-shadow: 0 8px 24px rgba(30, 58, 138, 0.15);
+}
+
+.advantage-icon {
+    background: var(--gradient-blue);
+    color: var(--logo-white);
+}
+
+/* Why Cards */
+.why-card:hover {
+    border-color: var(--logo-blue-dark);
+    box-shadow: 0 12px 32px rgba(30, 58, 138, 0.15);
+}
+
+.why-icon {
+    background: var(--gradient-blue);
+    color: var(--logo-white);
+}
+
+/* About Badge */
+.about-badge {
+    background: var(--gradient-blue);
+    color: var(--logo-white);
+}
+
+/* Selection de texte */
+::selection {
+    background-color: var(--logo-blue-dark);
+    color: var(--logo-white);
+}
+
+::-moz-selection {
+    background-color: var(--logo-blue-dark);
+    color: var(--logo-white);
+}

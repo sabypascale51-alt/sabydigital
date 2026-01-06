@@ -1,0 +1,168 @@
+/* ====================================
+   RESPONSIVE MOBILE FIX - CRITICAL
+   ==================================== */
+
+/* Prevent all elements from overflowing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Force responsive containers */
+.container,
+.hero-content,
+.services-grid,
+.why-grid,
+.portfolio-grid,
+.contact-content,
+.footer-content {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Responsive Tables */
+table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.875rem;
+    }
+}
+
+/* Force wrap long text */
+p, li, span, a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Responsive Embeds (videos, iframes) */
+iframe, 
+embed, 
+object,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix for comparison tables */
+.comparison-table,
+.comparison-row {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+    .comparison-table {
+        display: block;
+        width: 100%;
+    }
+    
+    .comparison-col {
+        min-width: 100px;
+        font-size: 0.875rem;
+        padding: 12px 8px;
+    }
+}
+
+/* Fix for service features lists */
+.service-features {
+    width: 100%;
+    padding-left: 0;
+}
+
+.service-features li {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* Fix for CTA buttons in grid */
+@media (max-width: 768px) {
+    .hero-cta,
+    .cta-buttons,
+    .ai-cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .hero-cta .btn,
+    .cta-buttons .btn,
+    .ai-cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Fix for logo images */
+.logo img,
+.footer-logo img {
+    max-height: 45px;
+    width: auto;
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 35px;
+    }
+}
+
+/* Fix for portfolio images */
+.portfolio-item img,
+.about-image img,
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Fix for form inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Fix for badges and tags */
+.badge,
+.tag,
+.service-badge,
+.hero-badge {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+    .badge,
+    .tag {
+        font-size: 0.8125rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Fix for grid layouts on very small screens */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 8px;
+    }
+    
+    .hero {
+        padding: 90px 0 30px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .service-card,
+    .contact-form {
+        padding: 20px;
+    }
+}

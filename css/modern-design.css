@@ -1,0 +1,652 @@
+/* ====================================
+   SABYDIGITAL - ULTRA MODERN DESIGN 2026
+   ==================================== */
+
+/* Modern Color Palette */
+:root {
+    /* Couleurs principales */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --accent-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --blue-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --orange-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --purple-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
+    /* Animations */
+    --transition-smooth: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ====================================
+   MODERN HERO SECTION - ULTRA CLEAN
+   ==================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    overflow: hidden;
+    padding: 140px 0 80px;
+}
+
+/* Subtle Grid Pattern Background */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.5;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.08), transparent 70%);
+}
+
+/* Remove floating shapes */
+.floating-shapes {
+    display: none;
+}
+
+/* Hero Content Modern */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-text {
+    color: var(--white);
+}
+
+/* Modern Badge - Style épuré */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+    border: 2px solid #3b82f6;
+    padding: 12px 24px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-badge i {
+    font-size: 1.25rem;
+    color: #3b82f6;
+}
+
+.hero-badge span {
+    color: #1e40af;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modern Title - Couleurs sombres lisibles */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+    color: #1f2937;
+}
+
+.gradient-text {
+    display: block;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 4rem;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 40px;
+    animation: fadeInUp 1.2s ease-out 0.4s backwards;
+    max-width: 600px;
+}
+
+/* Modern Stats Cards - Fond blanc épuré */
+.hero-stats-modern {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 48px;
+    animation: fadeInUp 1.4s ease-out 0.6s backwards;
+}
+
+.stat-card-modern {
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    padding: 28px 24px;
+    border-radius: 20px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+    transform: scaleX(0);
+    transition: var(--transition-smooth);
+}
+
+.stat-card-modern:hover {
+    transform: translateY(-8px);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+
+.stat-card-modern:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card-modern .stat-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 1.75rem;
+}
+
+.stat-number-modern {
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: #3b82f6;
+    line-height: 1;
+    margin-bottom: 8px;
+    display: block;
+    text-align: center;
+}
+
+.stat-label-modern {
+    font-size: 0.95rem;
+    color: #6b7280;
+    text-align: center;
+    display: block;
+}
+
+/* Modern CTA Buttons - Style épuré */
+.hero-cta-modern {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.6s ease-out 0.8s backwards;
+    margin-bottom: 32px;
+}
+
+/* Hero Trust Indicators */
+.hero-trust-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: fadeInUp 1.8s ease-out 1s backwards;
+}
+
+.hero-trust-modern p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 0;
+}
+
+.hero-trust-modern i {
+    color: #10b981;
+    font-size: 1.125rem;
+}
+
+.hero-trust-modern strong {
+    color: #1f2937;
+}
+
+.btn-modern-primary {
+    position: relative;
+    padding: 18px 40px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-modern-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-modern-primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-modern-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.5);
+}
+
+.btn-modern-secondary {
+    padding: 18px 40px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #3b82f6;
+    background: #ffffff;
+    border: 2px solid #3b82f6;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-modern-secondary:hover {
+    background: #3b82f6;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
+/* Modern Hero Visual - Style épuré */
+.hero-visual-modern {
+    position: relative;
+    animation: fadeInRight 1s ease-out 0.4s backwards;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.visual-container {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border: 3px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.visual-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.visual-container:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 30px 60px rgba(59, 130, 246, 0.2);
+}
+
+.visual-container:hover img {
+    transform: scale(1.03);
+}
+
+/* Floating Info Cards - Style blanc épuré */
+.floating-card {
+    position: absolute;
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    padding: 20px 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    animation: float-card 6s ease-in-out infinite;
+}
+
+.floating-card-1 {
+    top: 10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.floating-card-2 {
+    bottom: 15%;
+    right: -10%;
+    animation-delay: 2s;
+}
+
+@keyframes float-card {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.floating-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 15px 50px rgba(59, 130, 246, 0.2);
+}
+
+.floating-card .card-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 1.75rem;
+}
+
+.floating-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 6px;
+}
+
+.floating-card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0;
+}
+
+/* ====================================
+   MODERN SECTIONS
+   ==================================== */
+
+/* Bento Grid Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    margin: 80px 0;
+}
+
+.bento-item {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.bento-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--blue-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition-smooth);
+}
+
+.bento-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.bento-item:hover::before {
+    transform: scaleX(1);
+}
+
+.bento-large {
+    grid-column: span 8;
+}
+
+.bento-medium {
+    grid-column: span 6;
+}
+
+.bento-small {
+    grid-column: span 4;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--glass-shadow);
+    transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(31, 38, 135, 0.5);
+}
+
+/* Modern Service Cards */
+.service-card-modern {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--white);
+    border-radius: 30px;
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.service-card-modern::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    transition: var(--transition-smooth);
+}
+
+.service-card-modern:hover::before {
+    transform: scale(1.2);
+}
+
+.service-card-modern:hover {
+    transform: scale(1.05);
+    box-shadow: 0 30px 60px rgba(102, 126, 234, 0.4);
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: var(--transition-smooth);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====================================
+   RESPONSIVE MODERN DESIGN
+   ==================================== */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .hero-visual-modern {
+        order: -1;
+    }
+    
+    .bento-large,
+    .bento-medium,
+    .bento-small {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .hero-stats-modern {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .hero-cta-modern {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .btn-modern-primary,
+    .btn-modern-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+    
+    .floating-card {
+        display: none;
+    }
+    
+    /* Hero Badge Mobile */
+    .hero-badge {
+        font-size: 0.875rem;
+        padding: 10px 20px;
+    }
+    
+    /* Stats Cards Mobile */
+    .stat-card-modern {
+        padding: 20px;
+    }
+    
+    .stat-number-modern {
+        font-size: 2rem;
+    }
+    
+    .stat-label-modern {
+        font-size: 0.875rem;
+    }
+    
+    /* Hero Visual Mobile */
+    .hero-visual-modern {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .hero-image-modern {
+        border-radius: 16px;
+        max-height: 400px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 0 40px;
+    }
+    
+    .hero-title {
+        font-size: 1.875rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .stat-number-modern {
+        font-size: 1.75rem;
+    }
+    
+    .btn-modern-primary,
+    .btn-modern-secondary {
+        padding: 12px 20px;
+        font-size: 0.9375rem;
+    }
+}

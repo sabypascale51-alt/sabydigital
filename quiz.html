@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz IA : Quel Site Créé par IA Pour Vous ? | SabyDigital</title>
+    <meta name="description" content="Découvrez en 2 minutes si un site créé par IA est fait pour vous. Quiz gratuit avec recommandations personnalisées.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo-sabydigital.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/logo-colors.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px;">
+                    <img src="images/logo-sabydigital.png" alt="SabyDigital Logo" style="height: 45px;">
+                    <span style="font-size: 1.5rem; font-weight: 700; color: #000000;">Saby<span style="color: #1e3a8a;">Digital</span></span>
+                </a>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                        <li><a href="index.html#services" class="nav-link">Services</a></li>
+                        <li><a href="quiz.html" class="nav-link active">Quiz</a></li>
+                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Devis Gratuit</a>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quiz Container -->
+    <main class="quiz-main">
+        <div class="container">
+            <!-- Quiz Intro -->
+            <div class="quiz-intro" id="quizIntro">
+                <div class="quiz-intro-content">
+                    <div class="quiz-badge">
+                        <i class="fas fa-robot"></i>
+                        <span>Quiz IA Gratuit</span>
+                    </div>
+                    
+                    <h1 class="quiz-title">
+                        Votre Site Professionnel<br>
+                        <span class="gradient-text">Créé par IA en 3-7 Jours ?</span>
+                    </h1>
+                    
+                    <p class="quiz-subtitle">
+                        Répondez à 8 questions simples et découvrez si la création par Intelligence Artificielle est la solution idéale pour votre entreprise.
+                    </p>
+                    
+                    <div class="quiz-features">
+                        <div class="quiz-feature">
+                            <i class="fas fa-clock"></i>
+                            <span>2 minutes chrono</span>
+                        </div>
+                        <div class="quiz-feature">
+                            <i class="fas fa-robot"></i>
+                            <span>Solution IA personnalisée</span>
+                        </div>
+                        <div class="quiz-feature">
+                            <i class="fas fa-rocket"></i>
+                            <span>Découvrez si l'IA est faite pour vous</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-start-quiz" id="startQuizBtn">
+                        <i class="fas fa-play"></i>
+                        Commencer le Quiz
+                    </button>
+                    
+                    <p class="quiz-disclaimer">
+                        <i class="fas fa-lock"></i> Aucune carte bancaire requise · Résultats instantanés
+                    </p>
+                </div>
+                
+                <div class="quiz-intro-visual">
+                    <div class="visual-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>Site IA</h3>
+                        <p>Créé en 3-7 jours</p>
+                    </div>
+                    <div class="visual-card">
+                        <i class="fas fa-search"></i>
+                        <h3>SEO Intégré</h3>
+                        <p>Natif et optimisé</p>
+                    </div>
+                    <div class="visual-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Livraison Rapide</h3>
+                        <p>7x plus vite</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Questions -->
+            <div class="quiz-container" id="quizContainer" style="display: none;">
+                <!-- Progress Bar -->
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        Question <span id="currentQuestion">1</span> sur <span id="totalQuestions">8</span>
+                    </div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="question-card" id="questionCard">
+                    <div class="question-icon" id="questionIcon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    
+                    <h2 class="question-text" id="questionText"></h2>
+                    
+                    <div class="question-description" id="questionDescription"></div>
+                    
+                    <div class="answers-grid" id="answersGrid">
+                        <!-- Answers will be inserted here dynamically -->
+                    </div>
+                    
+                    <div class="quiz-navigation">
+                        <button class="btn-nav btn-prev" id="prevBtn" style="display: none;">
+                            <i class="fas fa-arrow-left"></i>
+                            Précédent
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Results -->
+            <div class="quiz-results" id="quizResults" style="display: none;">
+                <div class="results-confetti">🎉</div>
+                
+                <div class="results-content">
+                    <div class="results-badge" id="resultsBadge">
+                        <i class="fas fa-trophy"></i>
+                        <span>Résultat</span>
+                    </div>
+                    
+                    <h2 class="results-title" id="resultsTitle"></h2>
+                    
+                    <div class="results-score">
+                        <div class="score-circle">
+                            <svg width="200" height="200">
+                                <circle cx="100" cy="100" r="90" stroke="#e5e7eb" stroke-width="12" fill="none"/>
+                                <circle cx="100" cy="100" r="90" stroke="url(#gradient)" stroke-width="12" fill="none" 
+                                        stroke-dasharray="565" stroke-dashoffset="565" id="scoreCircle"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="score-text">
+                                <span class="score-number" id="scoreNumber">0</span>
+                                <span class="score-label">/ 100</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="results-description" id="resultsDescription"></div>
+                    
+                    <div class="results-recommendations">
+                        <h3><i class="fas fa-lightbulb"></i> Solutions Recommandées Pour Vous</h3>
+                        <div class="recommendations-grid" id="recommendationsGrid">
+                            <!-- Recommendations will be inserted here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Email Form -->
+                    <div class="results-email-form">
+                        <h3><i class="fas fa-envelope"></i> Recevez Votre Rapport Détaillé</h3>
+                        <p>Obtenez un plan d'action personnalisé et un devis sur-mesure par email.</p>
+                        
+                        <form class="email-capture-form" id="emailCaptureForm">
+                            <div class="form-group-inline">
+                                <input type="text" id="userName" placeholder="Votre prénom" required>
+                                <input type="email" id="userEmail" placeholder="Votre email" required>
+                                <button type="submit" class="btn-submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Recevoir Mon Rapport
+                                </button>
+                            </div>
+                            <p class="form-note">
+                                <i class="fas fa-shield-alt"></i> Vos données sont protégées. Pas de spam.
+                            </p>
+                        </form>
+                        
+                        <div class="form-success" id="formSuccessMessage" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Merci ! Votre rapport détaillé a été envoyé à votre adresse email.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="results-actions">
+                        <a href="index.html#contact" class="btn btn-primary btn-lg">
+                            <i class="fas fa-comments"></i>
+                            Discuter de Mon Projet
+                        </a>
+                        <button class="btn btn-outline btn-lg" id="retakeQuizBtn">
+                            <i class="fas fa-redo"></i>
+                            Refaire le Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 SabyDigital. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <span>|</span>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
