@@ -1,0 +1,404 @@
+/* ========================================
+   MENU BURGER MODERNE - Style Axonaut
+   Inspiré du design minimaliste et épuré
+   ======================================== */
+
+/* --- Variables CSS --- */
+:root {
+    --menu-bg: #ffffff;
+    --menu-item-bg: #e8f0fe;
+    --menu-item-hover: #dbeafe;
+    --primary-blue: #1e3a8a;
+    --primary-orange: #f97316;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 16px;
+}
+
+/* --- Header Moderne --- */
+.header-modern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--menu-bg);
+    box-shadow: var(--shadow-sm);
+    padding: 16px 0;
+    transition: all 0.3s ease;
+}
+
+.header-modern.scrolled {
+    padding: 12px 0;
+    box-shadow: var(--shadow-md);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- Logo --- */
+.logo-modern {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo-modern:hover {
+    transform: scale(1.05);
+}
+
+.logo-modern img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-modern .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.logo-modern .logo-text span {
+    color: var(--primary-blue);
+}
+
+/* --- Burger Icon --- */
+.burger-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    position: relative;
+}
+
+.burger-icon span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--primary-blue);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+.burger-icon span:nth-child(1) {
+    top: 12px;
+}
+
+.burger-icon span:nth-child(2) {
+    top: 20px;
+}
+
+.burger-icon span:nth-child(3) {
+    top: 28px;
+}
+
+/* Animation du burger en X */
+.burger-icon.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 20px;
+}
+
+.burger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 20px;
+}
+
+/* --- Menu Overlay Full Screen --- */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--menu-bg);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    padding-top: 80px;
+}
+
+.menu-overlay.active {
+    transform: translateX(0);
+}
+
+/* --- Menu Content --- */
+.menu-content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: calc(100vh - 180px);
+}
+
+/* --- Menu Items (Style Axonaut) --- */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 24px;
+    background: var(--menu-item-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-item:hover {
+    background: var(--menu-item-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.menu-item:active {
+    transform: translateY(0);
+}
+
+/* Menu item avec icône */
+.menu-item i {
+    margin-right: 8px;
+    font-size: 1.125rem;
+}
+
+/* Menu item spécial (Quiz) */
+.menu-item.special {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+}
+
+.menu-item.special:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #6a3f91 100%);
+}
+
+/* --- Menu CTAs (Bas du menu) --- */
+.menu-cta-container {
+    margin-top: auto;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 24px;
+    border-radius: var(--border-radius);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.menu-cta-secondary {
+    background: var(--menu-item-bg);
+    color: var(--primary-blue);
+    border: 2px solid var(--menu-item-bg);
+}
+
+.menu-cta-secondary:hover {
+    background: var(--menu-item-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.menu-cta-primary {
+    background: var(--primary-orange);
+    color: #ffffff;
+    border: 2px solid var(--primary-orange);
+    font-size: 1.125rem;
+}
+
+.menu-cta-primary:hover {
+    background: #ea580c;
+    border-color: #ea580c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(249, 115, 22, 0.3);
+}
+
+.menu-cta i {
+    margin-right: 8px;
+}
+
+/* --- Navigation Desktop (reste visible sur desktop) --- */
+.nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-desktop .nav-link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-desktop .nav-link:hover {
+    color: var(--primary-blue);
+}
+
+.nav-desktop .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-desktop .nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-desktop .btn-header {
+    padding: 12px 24px;
+    background: var(--primary-blue);
+    color: #ffffff;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-desktop .btn-header:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 991px) {
+    /* Afficher le burger icon sur mobile/tablette */
+    .burger-icon {
+        display: flex;
+    }
+    
+    /* Cacher la navigation desktop */
+    .nav-desktop {
+        display: none;
+    }
+    
+    /* Ajuster le padding du menu content */
+    .menu-content {
+        padding: 24px 20px;
+    }
+    
+    /* Ajuster la taille des boutons sur petit écran */
+    .menu-item,
+    .menu-cta {
+        font-size: 1rem;
+        padding: 16px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-container {
+        padding: 0 16px;
+    }
+    
+    .logo-modern img {
+        height: 40px;
+    }
+    
+    .logo-modern .logo-text {
+        font-size: 1.25rem;
+    }
+    
+    .menu-content {
+        padding: 20px 16px;
+        gap: 10px;
+    }
+    
+    .menu-item,
+    .menu-cta {
+        font-size: 0.9375rem;
+        padding: 15px 18px;
+    }
+}
+
+/* --- Animation d'entrée des menu items --- */
+.menu-overlay.active .menu-item,
+.menu-overlay.active .menu-cta {
+    animation: slideInUp 0.4s ease forwards;
+    opacity: 0;
+}
+
+.menu-overlay.active .menu-item:nth-child(1) { animation-delay: 0.05s; }
+.menu-overlay.active .menu-item:nth-child(2) { animation-delay: 0.1s; }
+.menu-overlay.active .menu-item:nth-child(3) { animation-delay: 0.15s; }
+.menu-overlay.active .menu-item:nth-child(4) { animation-delay: 0.2s; }
+.menu-overlay.active .menu-item:nth-child(5) { animation-delay: 0.25s; }
+.menu-overlay.active .menu-item:nth-child(6) { animation-delay: 0.3s; }
+.menu-overlay.active .menu-item:nth-child(7) { animation-delay: 0.35s; }
+.menu-overlay.active .menu-cta:nth-child(1) { animation-delay: 0.4s; }
+.menu-overlay.active .menu-cta:nth-child(2) { animation-delay: 0.45s; }
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Bloquer le scroll du body quand le menu est ouvert --- */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* --- Desktop Large (> 992px) : Menu normal --- */
+@media (min-width: 992px) {
+    .burger-icon {
+        display: none;
+    }
+    
+    .menu-overlay {
+        display: none;
+    }
+    
+    .nav-desktop {
+        display: flex;
+    }
+}

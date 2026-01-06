@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Politique de Confidentialité | SabyDigital - Agence Digitale</title>
-    <meta name="description" content="Politique de confidentialité et protection des données personnelles - SabyDigital conforme RGPD.">
+    <meta name="description" content="Politique de confidentialité et protection des données personnelles de SabyDigital - Conformité RGPD">
+    <meta name="robots" content="noindex, follow">
+    <title>Politique de Confidentialité | SabyDigital</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo-sabydigital.png">
@@ -13,271 +13,580 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/logo-colors.css">
+    <link rel="stylesheet" href="css/modern-design.css">
+    <link rel="stylesheet" href="css/responsive-fix.css">
+    
+    <style>
+        .legal-page {
+            padding: 120px 0 80px;
+            background: #f8fafc;
+            min-height: 100vh;
+        }
+        
+        .legal-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .legal-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .legal-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 16px;
+        }
+        
+        .legal-header p {
+            font-size: 1.125rem;
+            color: #64748b;
+        }
+        
+        .legal-content {
+            background: white;
+            border-radius: 16px;
+            padding: 60px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .legal-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .legal-content h2:first-child {
+            margin-top: 0;
+        }
+        
+        .legal-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #334155;
+            margin-top: 30px;
+            margin-bottom: 16px;
+        }
+        
+        .legal-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 16px;
+        }
+        
+        .legal-content ul {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+        
+        .legal-content li {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 8px;
+        }
+        
+        .legal-content strong {
+            color: #1e293b;
+            font-weight: 600;
+        }
+        
+        .legal-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+        }
+        
+        .legal-content table th,
+        .legal-content table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .legal-content table th {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+        }
+        
+        .info-box p {
+            margin: 0;
+            color: #1e40af;
+        }
+        
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box p {
+            margin: 0;
+            color: #92400e;
+        }
+        
+        .success-box {
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+            padding: 20px 24px;
+            margin: 24px 0;
+            border-radius: 8px;
+        }
+        
+        .success-box p {
+            margin: 0;
+            color: #065f46;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 40px;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: #1e40af;
+            gap: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .legal-page {
+                padding: 100px 0 60px;
+            }
+            
+            .legal-header h1 {
+                font-size: 2rem;
+            }
+            
+            .legal-content {
+                padding: 40px 24px;
+            }
+            
+            .legal-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .legal-content table {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px;">
-                    <img src="images/logo-sabydigital.png" alt="SabyDigital Logo" style="height: 45px;">
-                    <span style="font-size: 1.5rem; font-weight: 700; color: #000000;">Saby<span style="color: #1e3a8a;">Digital</span></span>
-                </a>
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 12px;">
+                        <img src="images/logo-sabydigital.png" alt="SabyDigital Logo" style="height: 50px; width: auto;">
+                        <span style="font-size: 1.5rem; font-weight: 700; color: #000000;">Saby<span style="color: #1e3a8a;">Digital</span></span>
+                    </a>
+                </div>
                 
                 <nav class="nav" id="nav">
                     <ul class="nav-list">
-                        <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
                         <li><a href="index.html#services" class="nav-link">Services</a></li>
-                        <li><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
-                        <li><a href="index.html#apropos" class="nav-link">À propos</a></li>
                         <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
                 
-                <a href="index.html#contact" class="btn btn-primary btn-sm">Devis Gratuit</a>
-                
-                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="header-actions">
+                    <a href="index.html#contact" class="btn btn-primary">Devis Gratuit</a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main style="padding-top: 100px; min-height: 80vh;">
-        <section class="legal-page" style="padding: 60px 0;">
-            <div class="container" style="max-width: 900px;">
-                <h1 style="font-size: 2.5rem; margin-bottom: 20px; color: #1e3a8a;">Politique de Confidentialité</h1>
-                <p style="color: #6b7280; margin-bottom: 40px;"><em>Dernière mise à jour : 6 janvier 2026</em></p>
-                
-                <div class="legal-content" style="line-height: 1.8; color: #374151;">
-                    
-                    <p style="font-size: 1.125rem; margin-bottom: 30px;">
-                        Chez <strong>SabyDigital</strong>, j'attache une grande importance à la protection de vos données personnelles. 
-                        Cette politique de confidentialité explique quelles informations je collecte, comment je les utilise et quels sont vos droits.
-                    </p>
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">1. Responsable du Traitement des Données</h2>
-                    <p><strong>Responsable :</strong> Saby Pascale - SabyDigital</p>
-                    <p><strong>Email :</strong> <a href="mailto:contact@sabydigital.fr" style="color: #3b82f6;">contact@sabydigital.fr</a></p>
-                    <p><strong>Téléphone :</strong> <a href="tel:0660875477" style="color: #3b82f6;">06 60 87 54 77</a></p>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">2. Données Collectées</h2>
-                    
-                    <h3 style="font-size: 1.25rem; margin-top: 24px; margin-bottom: 12px; color: #1f2937;">2.1. Données fournies directement</h3>
-                    <p>Lorsque vous me contactez via le formulaire de contact, je collecte :</p>
-                    <ul style="margin-left: 24px; margin-top: 12px;">
-                        <li>Votre nom et prénom</li>
-                        <li>Votre adresse email</li>
-                        <li>Votre numéro de téléphone (si fourni)</li>
-                        <li>Le nom de votre entreprise (si fourni)</li>
-                        <li>Votre message et les informations relatives à votre projet</li>
-                    </ul>
-                    
-                    <h3 style="font-size: 1.25rem; margin-top: 24px; margin-bottom: 12px; color: #1f2937;">2.2. Données collectées automatiquement</h3>
-                    <p>Lors de votre navigation sur le site, je peux collecter :</p>
-                    <ul style="margin-left: 24px; margin-top: 12px;">
-                        <li>Votre adresse IP</li>
-                        <li>Le type de navigateur et de système d'exploitation</li>
-                        <li>Les pages visitées et le temps passé sur le site</li>
-                        <li>La provenance de votre visite (moteur de recherche, lien direct, etc.)</li>
-                    </ul>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">3. Finalités du Traitement</h2>
-                    <p>Vos données personnelles sont collectées et traitées pour les finalités suivantes :</p>
-                    <ul style="margin-left: 24px; margin-top: 12px;">
-                        <li><strong>Gestion de vos demandes :</strong> Répondre à vos demandes de contact, de devis ou d'informations</li>
-                        <li><strong>Relation client :</strong> Gérer notre relation commerciale et vous fournir nos services</li>
-                        <li><strong>Amélioration du site :</strong> Analyser l'utilisation du site pour améliorer l'expérience utilisateur</li>
-                        <li><strong>Marketing (avec consentement) :</strong> Vous informer de nos actualités et offres si vous y avez consenti</li>
-                        <li><strong>Obligations légales :</strong> Respecter nos obligations légales et réglementaires</li>
-                    </ul>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">4. Base Légale du Traitement</h2>
-                    <p>Le traitement de vos données repose sur les bases légales suivantes :</p>
-                    <ul style="margin-left: 24px; margin-top: 12px;">
-                        <li><strong>Votre consentement :</strong> Lorsque vous remplissez notre formulaire de contact</li>
-                        <li><strong>Intérêt légitime :</strong> Pour améliorer nos services et notre site web</li>
-                        <li><strong>Exécution d'un contrat :</strong> Pour la gestion de votre projet si vous devenez client</li>
-                        <li><strong>Obligations légales :</strong> Pour respecter la législation en vigueur</li>
-                    </ul>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">5. Durée de Conservation</h2>
-                    <p>Je conserve vos données personnelles pendant les durées suivantes :</p>
-                    <ul style="margin-left: 24px; margin-top: 12px;">
-                        <li><strong>Demandes de contact :</strong> 3 ans à compter du dernier contact</li>
-                        <li><strong>Clients :</strong> Durée de la relation commerciale + 5 ans (obligations comptables)</li>
-                        <li><strong>Données de navigation :</strong> 13 mois (cookies analytiques)</li>
-                        <li><strong>Prospects non convertis :</strong> 3 ans</li>
-                    </ul>
-                    <p style="margin-top: 16px;">
-                        Passé ces délais, vos données sont supprimées ou anonymisées, sauf obligations légales contraires.
-                    </p>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">6. Destinataires des Données</h2>
-                    <p>Vos données personnelles peuvent être transmises à :</p>
-                    <ul style="margin-left: 24px; margin-top: 12px;">
-                        <li><strong>SabyDigital :</strong> Personnel habilité pour gérer votre demande</li>
-                        <li><strong>Prestataires techniques :</strong> Hébergeur web, service d'emailing (sous contrat de confidentialité)</li>
-                        <li><strong>Autorités légales :</strong> Si requis par la loi</li>
-                    </ul>
-                    <p style="margin-top: 16px;">
-                        <strong>⚠️ Je ne vends jamais vos données personnelles à des tiers.</strong>
-                    </p>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">7. Vos Droits</h2>
-                    <p>Conformément au RGPD et à la loi Informatique et Libertés, vous disposez des droits suivants :</p>
-                    
-                    <div style="margin-top: 24px;">
-                        <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: #1f2937;">✅ Droit d'accès</h3>
-                        <p>Vous pouvez demander à consulter toutes les données personnelles que je détiens sur vous.</p>
-                    </div>
-                    
-                    <div style="margin-top: 24px;">
-                        <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: #1f2937;">✅ Droit de rectification</h3>
-                        <p>Vous pouvez demander la correction de données inexactes ou incomplètes.</p>
-                    </div>
-                    
-                    <div style="margin-top: 24px;">
-                        <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: #1f2937;">✅ Droit à l'effacement ("droit à l'oubli")</h3>
-                        <p>Vous pouvez demander la suppression de vos données dans certaines conditions.</p>
-                    </div>
-                    
-                    <div style="margin-top: 24px;">
-                        <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: #1f2937;">✅ Droit à la limitation du traitement</h3>
-                        <p>Vous pouvez demander à limiter l'utilisation de vos données dans certains cas.</p>
-                    </div>
-                    
-                    <div style="margin-top: 24px;">
-                        <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: #1f2937;">✅ Droit à la portabilité</h3>
-                        <p>Vous pouvez récupérer vos données dans un format structuré et lisible par machine.</p>
-                    </div>
-                    
-                    <div style="margin-top: 24px;">
-                        <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: #1f2937;">✅ Droit d'opposition</h3>
-                        <p>Vous pouvez vous opposer au traitement de vos données à des fins de marketing direct.</p>
-                    </div>
-                    
-                    <div style="margin-top: 24px;">
-                        <h3 style="font-size: 1.125rem; margin-bottom: 8px; color: #1f2937;">✅ Droit de retirer votre consentement</h3>
-                        <p>Vous pouvez retirer votre consentement à tout moment sans affecter la licéité du traitement antérieur.</p>
-                    </div>
-                    
-                    <div style="margin-top: 32px; padding: 20px; background: #eff6ff; border-radius: 12px; border-left: 4px solid #3b82f6;">
-                        <p style="margin: 0;"><strong>📧 Pour exercer vos droits :</strong> Envoyez un email à <a href="mailto:contact@sabydigital.fr" style="color: #3b82f6;">contact@sabydigital.fr</a> avec la mention "Exercice de mes droits RGPD" accompagné d'une copie de votre pièce d'identité. Je vous répondrai sous 1 mois maximum.</p>
-                    </div>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">8. Sécurité des Données</h2>
-                    <p>Je mets en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre :</p>
-                    <ul style="margin-left: 24px; margin-top: 12px;">
-                        <li>La destruction accidentelle ou illicite</li>
-                        <li>La perte, l'altération ou la divulgation non autorisée</li>
-                        <li>L'accès non autorisé</li>
-                    </ul>
-                    <p style="margin-top: 16px;">Nos mesures de sécurité incluent :</p>
-                    <ul style="margin-left: 24px; margin-top: 12px;">
-                        <li>🔒 Certificat SSL (HTTPS)</li>
-                        <li>🛡️ Sauvegardes régulières</li>
-                        <li>🔐 Accès restreint aux données personnelles</li>
-                        <li>⚙️ Mises à jour de sécurité régulières</li>
-                    </ul>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">9. Cookies</h2>
-                    <p>Notre site utilise des cookies pour améliorer votre expérience de navigation et analyser le trafic.</p>
-                    
-                    <h3 style="font-size: 1.25rem; margin-top: 24px; margin-bottom: 12px; color: #1f2937;">Types de cookies utilisés :</h3>
-                    <ul style="margin-left: 24px; margin-top: 12px;">
-                        <li><strong>Cookies strictement nécessaires :</strong> Indispensables au fonctionnement du site</li>
-                        <li><strong>Cookies analytiques :</strong> Pour comprendre comment les visiteurs utilisent le site (Google Analytics)</li>
-                        <li><strong>Cookies de préférences :</strong> Pour mémoriser vos choix (langue, affichage, etc.)</li>
-                    </ul>
-                    
-                    <p style="margin-top: 16px;">
-                        Vous pouvez gérer vos préférences de cookies dans les paramètres de votre navigateur. 
-                        Notez que le refus de certains cookies peut affecter le fonctionnement du site.
-                    </p>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">10. Transferts de Données Hors UE</h2>
-                    <p>
-                        Vos données personnelles sont hébergées en France et ne font pas l'objet de transferts hors de l'Union Européenne, 
-                        sauf si vous utilisez des services tiers (ex: formulaires Google) qui peuvent traiter des données hors UE sous garanties appropriées.
-                    </p>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">11. Modifications de la Politique</h2>
-                    <p>
-                        Je me réserve le droit de modifier cette politique de confidentialité à tout moment. 
-                        Toute modification sera publiée sur cette page avec une nouvelle date de "Dernière mise à jour".
-                    </p>
-                    <p style="margin-top: 16px;">
-                        Nous vous recommandons de consulter régulièrement cette page pour être informé des éventuelles modifications.
-                    </p>
-                    
-                    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
-                    
-                    <h2 style="font-size: 1.75rem; margin-top: 40px; margin-bottom: 16px; color: #1f2937;">12. Réclamation</h2>
-                    <p>
-                        Si vous estimez que vos droits ne sont pas respectés, vous avez le droit de déposer une réclamation auprès de la 
-                        <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong> :
-                    </p>
-                    <ul style="margin-left: 24px; margin-top: 12px; list-style: none; padding: 0;">
-                        <li style="margin-bottom: 8px;"><strong>Site web :</strong> <a href="https://www.cnil.fr" target="_blank" rel="noopener" style="color: #3b82f6;">www.cnil.fr</a></li>
-                        <li style="margin-bottom: 8px;"><strong>Adresse :</strong> 3 Place de Fontenoy - TSA 80715 - 75334 PARIS CEDEX 07</li>
-                        <li><strong>Téléphone :</strong> 01 53 73 22 22</li>
-                    </ul>
-                    
-                    <div style="margin-top: 60px; padding: 24px; background: #dcfce7; border-radius: 12px; border-left: 4px solid #10b981;">
-                        <p style="margin: 0;"><strong>✅ Engagement SabyDigital :</strong> Nous nous engageons à traiter vos données personnelles avec le plus grand soin et dans le respect total de la réglementation en vigueur. Votre confiance est notre priorité.</p>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 60px; text-align: center;">
-                    <a href="index.html" class="btn btn-primary" style="display: inline-block; padding: 14px 32px; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s ease;">
-                        <i class="fas fa-home"></i> Retour à l'accueil
-                    </a>
-                </div>
+    <!-- Legal Page Content -->
+    <section class="legal-page">
+        <div class="legal-container">
+            <div class="legal-header">
+                <h1><i class="fas fa-shield-alt"></i> Politique de Confidentialité</h1>
+                <p>Dernière mise à jour : 6 janvier 2026</p>
             </div>
-        </section>
-    </main>
+            
+            <div class="legal-content">
+                <div class="info-box">
+                    <p><i class="fas fa-info-circle"></i> <strong>Notre engagement :</strong> SabyDigital s'engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.</p>
+                </div>
+
+                <h2>1. Qui est responsable de vos données ?</h2>
+                <p>Le responsable du traitement de vos données personnelles est :</p>
+                <ul>
+                    <li><strong>Nom :</strong> SabyDigital</li>
+                    <li><strong>Responsable :</strong> Saby Pascale</li>
+                    <li><strong>Email :</strong> <a href="mailto:contact@sabydigital.fr">contact@sabydigital.fr</a></li>
+                    <li><strong>Téléphone :</strong> <a href="tel:0660875477">06 60 87 54 77</a></li>
+                </ul>
+
+                <h2>2. Quelles données collectons-nous ?</h2>
+                <p>Nous collectons uniquement les données strictement nécessaires au bon fonctionnement de nos services.</p>
+                
+                <h3>2.1 Données collectées via le formulaire de contact</h3>
+                <p>Lorsque vous remplissez notre formulaire de demande de devis, nous collectons :</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Données collectées</th>
+                            <th>Caractère obligatoire</th>
+                            <th>Finalité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nom et prénom</td>
+                            <td>✅ Obligatoire</td>
+                            <td>Identification et contact</td>
+                        </tr>
+                        <tr>
+                            <td>Adresse email</td>
+                            <td>✅ Obligatoire</td>
+                            <td>Communication et devis</td>
+                        </tr>
+                        <tr>
+                            <td>Numéro de téléphone</td>
+                            <td>✅ Obligatoire</td>
+                            <td>Prise de contact rapide</td>
+                        </tr>
+                        <tr>
+                            <td>Métier (artisan)</td>
+                            <td>✅ Obligatoire</td>
+                            <td>Personnalisation de l'offre</td>
+                        </tr>
+                        <tr>
+                            <td>Département IDF</td>
+                            <td>✅ Obligatoire</td>
+                            <td>Zone d'intervention</td>
+                        </tr>
+                        <tr>
+                            <td>Ville d'intervention</td>
+                            <td>✅ Obligatoire</td>
+                            <td>SEO local et ciblage</td>
+                        </tr>
+                        <tr>
+                            <td>Service souhaité</td>
+                            <td>✅ Obligatoire</td>
+                            <td>Préparation du devis</td>
+                        </tr>
+                        <tr>
+                            <td>Message / Projet</td>
+                            <td>✅ Obligatoire</td>
+                            <td>Compréhension de vos besoins</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>2.2 Données collectées automatiquement</h3>
+                <p>Lors de votre navigation sur notre site, nous collectons automatiquement :</p>
+                <ul>
+                    <li><strong>Adresse IP</strong> (anonymisée)</li>
+                    <li><strong>Type de navigateur</strong> et version</li>
+                    <li><strong>Pages visitées</strong> et durée de la visite</li>
+                    <li><strong>Source de trafic</strong> (Google, réseaux sociaux, lien direct)</li>
+                    <li><strong>Appareil utilisé</strong> (ordinateur, mobile, tablette)</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><i class="fas fa-exclamation-triangle"></i> <strong>Important :</strong> Ces données sont collectées via Google Analytics 4 de manière anonymisée et ne permettent PAS de vous identifier personnellement.</p>
+                </div>
+
+                <h2>3. Pourquoi collectons-nous vos données ?</h2>
+                <p>Vos données personnelles sont utilisées pour les finalités suivantes :</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Finalité</th>
+                            <th>Base légale (RGPD)</th>
+                            <th>Durée de conservation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Traitement de votre demande de devis</strong></td>
+                            <td>Consentement + Intérêt légitime</td>
+                            <td>3 ans après le dernier contact</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Communication commerciale</strong> (réponse, suivi)</td>
+                            <td>Consentement</td>
+                            <td>3 ans après le dernier contact</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Amélioration du site</strong> (analytics)</td>
+                            <td>Intérêt légitime</td>
+                            <td>26 mois (Google Analytics 4)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gestion de la relation client</strong></td>
+                            <td>Exécution du contrat</td>
+                            <td>10 ans (obligations comptables)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Respect des obligations légales</strong></td>
+                            <td>Obligation légale</td>
+                            <td>Selon la réglementation applicable</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>4. Qui a accès à vos données ?</h2>
+                <p>Vos données personnelles sont traitées en toute confidentialité. Elles peuvent être partagées avec :</p>
+                
+                <h3>4.1 En interne</h3>
+                <ul>
+                    <li><strong>Saby Pascale</strong> (fondatrice et gérante) : accès complet pour le traitement des demandes</li>
+                </ul>
+
+                <h3>4.2 Prestataires externes (sous-traitants RGPD)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Prestataire</th>
+                            <th>Service</th>
+                            <th>Localisation des données</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Netlify</strong></td>
+                            <td>Hébergement du site</td>
+                            <td>🇺🇸 USA (clauses contractuelles types)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Analytics 4</strong></td>
+                            <td>Analyse d'audience</td>
+                            <td>🇺🇸 USA (anonymisation IP)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Netlify Forms</strong></td>
+                            <td>Gestion des formulaires</td>
+                            <td>🇺🇸 USA (chiffrement HTTPS)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <p><i class="fas fa-shield-alt"></i> <strong>Sécurité :</strong> Tous nos prestataires respectent le RGPD et ont signé des accords de traitement des données personnelles.</p>
+                </div>
+
+                <h3>4.3 Pas de revente de données</h3>
+                <div class="success-box">
+                    <p><i class="fas fa-check-circle"></i> <strong>Garantie :</strong> Nous ne vendons JAMAIS vos données personnelles à des tiers. Elles ne sont utilisées QUE pour vous fournir nos services.</p>
+                </div>
+
+                <h2>5. Combien de temps conservons-nous vos données ?</h2>
+                <p>Nous conservons vos données personnelles pendant les durées suivantes :</p>
+                <ul>
+                    <li><strong>Prospects (demande de devis non convertie) :</strong> 3 ans après le dernier contact</li>
+                    <li><strong>Clients (projet réalisé) :</strong> 10 ans (obligations comptables et fiscales)</li>
+                    <li><strong>Données de navigation (Google Analytics) :</strong> 26 mois maximum</li>
+                    <li><strong>Logs de connexion :</strong> 12 mois (sécurité informatique)</li>
+                </ul>
+                <p>Au-delà de ces durées, vos données sont <strong>automatiquement supprimées</strong> ou <strong>anonymisées</strong>.</p>
+
+                <h2>6. Vos droits sur vos données personnelles</h2>
+                <p>Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :</p>
+
+                <h3>6.1 Droit d'accès</h3>
+                <p>Vous pouvez <strong>demander une copie</strong> de toutes les données personnelles que nous détenons sur vous.</p>
+
+                <h3>6.2 Droit de rectification</h3>
+                <p>Vous pouvez <strong>corriger ou mettre à jour</strong> vos données personnelles si elles sont inexactes ou incomplètes.</p>
+
+                <h3>6.3 Droit à l'effacement ("droit à l'oubli")</h3>
+                <p>Vous pouvez demander la <strong>suppression de vos données</strong> dans certains cas (ex : retrait du consentement, données non nécessaires).</p>
+
+                <h3>6.4 Droit à la limitation du traitement</h3>
+                <p>Vous pouvez demander de <strong>restreindre l'utilisation</strong> de vos données en attendant la résolution d'une contestation.</p>
+
+                <h3>6.5 Droit à la portabilité</h3>
+                <p>Vous pouvez <strong>récupérer vos données</strong> dans un format structuré et lisible (CSV, JSON) pour les transférer à un autre prestataire.</p>
+
+                <h3>6.6 Droit d'opposition</h3>
+                <p>Vous pouvez vous <strong>opposer au traitement</strong> de vos données pour des raisons tenant à votre situation particulière.</p>
+
+                <h3>6.7 Droit de retirer votre consentement</h3>
+                <p>Vous pouvez <strong>retirer votre consentement</strong> à tout moment (ex : désabonnement des emails marketing).</p>
+
+                <div class="info-box">
+                    <p><i class="fas fa-envelope"></i> <strong>Comment exercer vos droits ?</strong><br>
+                    Envoyez un email à <a href="mailto:contact@sabydigital.fr">contact@sabydigital.fr</a> avec pour objet "Exercice de mes droits RGPD" en précisant votre demande. Nous vous répondrons sous <strong>1 mois maximum</strong>.</p>
+                </div>
+
+                <h2>7. Cookies et technologies similaires</h2>
+                <h3>7.1 Qu'est-ce qu'un cookie ?</h3>
+                <p>Un cookie est un petit fichier texte stocké sur votre appareil lors de votre visite sur notre site. Il permet de mémoriser vos préférences et d'analyser votre navigation.</p>
+
+                <h3>7.2 Quels cookies utilisons-nous ?</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type de cookie</th>
+                            <th>Finalité</th>
+                            <th>Durée</th>
+                            <th>Consentement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Cookies essentiels</strong></td>
+                            <td>Fonctionnement du site (navigation, formulaires)</td>
+                            <td>Session</td>
+                            <td>❌ Non requis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Analytics 4</strong></td>
+                            <td>Analyse d'audience (pages vues, trafic)</td>
+                            <td>26 mois</td>
+                            <td>✅ Requis</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>7.3 Comment refuser les cookies ?</h3>
+                <p>Vous pouvez désactiver les cookies à tout moment dans les paramètres de votre navigateur :</p>
+                <ul>
+                    <li><strong>Google Chrome :</strong> Paramètres > Confidentialité et sécurité > Cookies</li>
+                    <li><strong>Firefox :</strong> Options > Vie privée et sécurité > Cookies</li>
+                    <li><strong>Safari :</strong> Préférences > Confidentialité > Cookies</li>
+                    <li><strong>Edge :</strong> Paramètres > Cookies et autorisations de sites</li>
+                </ul>
+
+                <h2>8. Sécurité de vos données</h2>
+                <p>Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre :</p>
+                <ul>
+                    <li>❌ <strong>Accès non autorisé</strong></li>
+                    <li>❌ <strong>Perte ou destruction accidentelle</strong></li>
+                    <li>❌ <strong>Divulgation illicite</strong></li>
+                    <li>❌ <strong>Altération</strong></li>
+                </ul>
+
+                <h3>8.1 Mesures de sécurité mises en place</h3>
+                <ul>
+                    <li>✅ <strong>Certificat SSL/TLS</strong> (chiffrement HTTPS)</li>
+                    <li>✅ <strong>Hébergement sécurisé</strong> (Netlify avec conformité SOC 2)</li>
+                    <li>✅ <strong>Anonymisation des données</strong> de navigation (Google Analytics 4)</li>
+                    <li>✅ <strong>Accès restreint</strong> aux données (uniquement les personnes autorisées)</li>
+                    <li>✅ <strong>Sauvegardes régulières</strong> automatiques</li>
+                </ul>
+
+                <h2>9. Transferts de données hors UE</h2>
+                <p>Certains de nos prestataires (Netlify, Google Analytics) sont situés aux <strong>États-Unis 🇺🇸</strong>.</p>
+                <p>Ces transferts sont encadrés par :</p>
+                <ul>
+                    <li>✅ <strong>Clauses contractuelles types</strong> approuvées par la Commission européenne</li>
+                    <li>✅ <strong>Anonymisation des adresses IP</strong> (Google Analytics 4)</li>
+                    <li>✅ <strong>Chiffrement HTTPS</strong> de bout en bout</li>
+                </ul>
+
+                <h2>10. Modification de cette politique</h2>
+                <p>Nous pouvons modifier cette politique de confidentialité à tout moment pour refléter :</p>
+                <ul>
+                    <li>Les évolutions de nos services</li>
+                    <li>Les changements de réglementation (RGPD, etc.)</li>
+                    <li>Les nouvelles technologies utilisées</li>
+                </ul>
+                <p>En cas de modification substantielle, nous vous informerons par <strong>email</strong> ou via une <strong>notification sur le site</strong>.</p>
+
+                <h2>11. Réclamation auprès de la CNIL</h2>
+                <p>Si vous estimez que vos droits ne sont pas respectés, vous avez le droit de déposer une réclamation auprès de la <strong>CNIL (Commission Nationale de l'Informatique et des Libertés)</strong> :</p>
+                <ul>
+                    <li><strong>Site web :</strong> <a href="https://www.cnil.fr" target="_blank" rel="noopener">https://www.cnil.fr</a></li>
+                    <li><strong>Adresse :</strong> 3 Place de Fontenoy, 75007 Paris, France</li>
+                    <li><strong>Téléphone :</strong> 01 53 73 22 22</li>
+                </ul>
+
+                <h2>12. Contact</h2>
+                <p>Pour toute question concernant cette politique de confidentialité ou pour exercer vos droits, contactez-nous :</p>
+                <ul>
+                    <li><strong>Email :</strong> <a href="mailto:contact@sabydigital.fr">contact@sabydigital.fr</a></li>
+                    <li><strong>Téléphone :</strong> <a href="tel:0660875477">06 60 87 54 77</a></li>
+                    <li><strong>Formulaire de contact :</strong> <a href="index.html#contact">Nous contacter</a></li>
+                </ul>
+
+                <div class="success-box" style="margin-top: 40px;">
+                    <p><i class="fas fa-heart"></i> <strong>Notre engagement :</strong> Votre vie privée est notre priorité. Nous traitons vos données avec le plus grand respect et la plus grande transparence.</p>
+                </div>
+
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo-sabydigital.png" alt="SabyDigital Logo" style="height: 50px; width: auto;">
+                        <span style="font-size: 1.25rem; font-weight: 700; color: #000000;">Saby<span style="color: #1e3a8a;">Digital</span></span>
+                    </div>
+                    <p class="footer-tagline">Votre partenaire digital pour propulser votre visibilité en Île-de-France</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liens Légaux</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html">Mentions Légales</a></li>
+                        <li><a href="politique-confidentialite.html">Politique de Confidentialité</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> <a href="tel:0660875477">06 60 87 54 77</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:contact@sabydigital.fr">contact@sabydigital.fr</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Île-de-France (75, 77, 78, 91, 92, 93, 94, 95)</li>
+                    </ul>
+                </div>
+            </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2026 SabyDigital. Tous droits réservés.</p>
-                <div class="footer-legal">
-                    <a href="mentions-legales.html">Mentions légales</a>
-                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
-                </div>
             </div>
         </div>
     </footer>

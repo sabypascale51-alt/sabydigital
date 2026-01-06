@@ -8,8 +8,53 @@
     <meta name="author" content="Saby Pascale - SabyDigital">
     <title>Artisan en Île-de-France : Site Web + 1ère Page Google Locale | SabyDigital</title>
     
+    <!-- Canonical URL (éviter le duplicate content) -->
+    <link rel="canonical" href="https://sabydigital.netlify.app/">
+    
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sabydigital.netlify.app">
+    <meta property="og:title" content="Pack Visibilité Artisan IDF : Site Web + Google My Business | 890€">
+    <meta property="og:description" content="Plombier, électricien, maçon en Île-de-France : Site professionnel + Fiche Google My Business optimisée en 3-7 jours. Soyez trouvé en 1ère page Google locale. Pack complet 890€ TTC.">
+    <meta property="og:image" content="https://sabydigital.netlify.app/images/og-image-sabydigital.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="SabyDigital - Pack Visibilité pour Artisans en Île-de-France">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="SabyDigital">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sabydigital.netlify.app">
+    <meta name="twitter:title" content="Site Web + Google My Business pour Artisans IDF | 890€">
+    <meta name="twitter:description" content="Pack Visibilité pour plombiers, électriciens, maçons en Île-de-France. Livraison 3-7 jours. 1ère page Google locale garantie.">
+    <meta name="twitter:image" content="https://sabydigital.netlify.app/images/twitter-card-sabydigital.jpg">
+    <meta name="twitter:image:alt" content="SabyDigital - Visibilité Web pour Artisans IDF">
+    <meta name="twitter:creator" content="@SabyDigital">
+    
+    <!-- Balises Apple (iOS/Safari) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SabyDigital">
+    <link rel="apple-touch-icon" href="images/logo-sabydigital.png">
+    
+    <!-- Balises Microsoft (Windows) -->
+    <meta name="msapplication-TileColor" content="#1e3a8a">
+    <meta name="msapplication-TileImage" content="images/logo-sabydigital.png">
+    <meta name="theme-color" content="#1e3a8a">
+    
+    <!-- Language & Region -->
+    <link rel="alternate" hreflang="fr" href="https://sabydigital.netlify.app/">
+    <link rel="alternate" hreflang="x-default" href="https://sabydigital.netlify.app/">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo-sabydigital.png">
+    
+    <!-- DNS Prefetch & Preconnect (Performance) -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +69,13 @@
     <link rel="stylesheet" href="css/modern-design.css">
     <link rel="stylesheet" href="css/responsive-fix.css">
     <link rel="stylesheet" href="css/logo-colors.css">
+    <link rel="stylesheet" href="css/burger-menu.css">
+    
+    <!-- Preload Critical Resources (Performance) -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/modern-design.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="images/logo-sabydigital.png" as="image">
     
     <!-- Google Analytics 4 -->
     <!-- Remplacez G-XXXXXXXXXX par votre ID de mesure Google Analytics -->
@@ -34,43 +86,248 @@
         gtag('js', new Date());
         gtag('config', 'G-XXXXXXXXXX');
     </script>
+    
+    <!-- Schema.org LocalBusiness (SEO Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://sabydigital.netlify.app",
+      "name": "SabyDigital",
+      "description": "Création de sites web professionnels et optimisation Google My Business pour artisans du bâtiment en Île-de-France. Pack Visibilité 890€ : Site web + Fiche GMB optimisée en 3-7 jours.",
+      "image": "https://sabydigital.netlify.app/images/logo-sabydigital.png",
+      "logo": "https://sabydigital.netlify.app/images/logo-sabydigital.png",
+      "url": "https://sabydigital.netlify.app",
+      "telephone": "+33660875477",
+      "email": "contact@sabydigital.fr",
+      "priceRange": "890€",
+      "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+      "currenciesAccepted": "EUR",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "FR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "48.8566",
+        "longitude": "2.3522"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Paris",
+          "alternateName": "Paris 75"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Seine-et-Marne",
+          "alternateName": "77"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Yvelines",
+          "alternateName": "78"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Essonne",
+          "alternateName": "91"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hauts-de-Seine",
+          "alternateName": "92"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Seine-Saint-Denis",
+          "alternateName": "93"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Val-de-Marne",
+          "alternateName": "94"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Val-d'Oise",
+          "alternateName": "95"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services Web pour Artisans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pack Visibilité Artisan IDF",
+              "description": "Site web professionnel 5 pages + Fiche Google My Business optimisée + SEO Local Île-de-France. Livraison en 3-7 jours.",
+              "provider": {
+                "@type": "LocalBusiness",
+                "name": "SabyDigital"
+              }
+            },
+            "price": "890",
+            "priceCurrency": "EUR"
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "12"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/sabydigital",
+        "https://www.linkedin.com/company/sabydigital",
+        "https://www.instagram.com/sabydigital"
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org WebSite (Search Box) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SabyDigital",
+      "url": "https://sabydigital.netlify.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sabydigital.netlify.app/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://sabydigital.netlify.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://sabydigital.netlify.app#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Portfolio",
+          "item": "https://sabydigital.netlify.app#portfolio"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Contact",
+          "item": "https://sabydigital.netlify.app#contact"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="#accueil" style="display: flex; align-items: center; gap: 12px;">
-                        <img src="images/logo-sabydigital.png" alt="SabyDigital Logo" style="height: 50px; width: auto;">
-                        <span style="font-size: 1.5rem; font-weight: 700; color: #000000;">Saby<span style="color: #1e3a8a;">Digital</span></span>
-                    </a>
-                </div>
-                
-                <nav class="nav" id="nav">
-                    <ul class="nav-list">
-                        <li><a href="#accueil" class="nav-link">Accueil</a></li>
-                        <li><a href="#services" class="nav-link">Services</a></li>
-                        <li><a href="quiz.html" class="nav-link" style="color: #f97316; font-weight: 600;">
-                            <i class="fas fa-magic"></i> Quiz
-                        </a></li>
-                        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                        <li><a href="#apropos" class="nav-link">À propos</a></li>
-                        <li><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="header-actions">
-                    <a href="#contact" class="btn btn-primary">Devis Gratuit</a>
-                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
+    <!-- Header Moderne avec Menu Burger Style Axonaut -->
+    <header class="header-modern" id="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="#accueil" class="logo-modern">
+                <img src="images/logo-sabydigital.png" alt="SabyDigital Logo">
+                <span class="logo-text">Saby<span>Digital</span></span>
+            </a>
+            
+            <!-- Navigation Desktop -->
+            <nav class="nav-desktop">
+                <a href="#accueil" class="nav-link">Accueil</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="quiz.html" class="nav-link" style="color: #f97316;">
+                    <i class="fas fa-magic"></i> Quiz
+                </a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#apropos" class="nav-link">À propos</a>
+                <a href="#contact" class="btn-header">
+                    <i class="fas fa-rocket"></i> Devis Gratuit
+                </a>
+            </nav>
+            
+            <!-- Burger Icon (Mobile/Tablette) -->
+            <button class="burger-icon" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+    
+    <!-- Menu Overlay Full Screen (Mobile/Tablette) -->
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <!-- Menu Items -->
+            <a href="#accueil" class="menu-item">
+                <i class="fas fa-home"></i> Accueil
+            </a>
+            
+            <a href="#services" class="menu-item">
+                <i class="fas fa-briefcase"></i> Pack Visibilité 890€
+            </a>
+            
+            <a href="quiz.html" class="menu-item special">
+                <i class="fas fa-magic"></i> Quiz Interactif
+            </a>
+            
+            <a href="#portfolio" class="menu-item">
+                <i class="fas fa-images"></i> Cas Clients IDF
+            </a>
+            
+            <a href="#villes-couvertes" class="menu-item">
+                <i class="fas fa-map-marker-alt"></i> Villes Couvertes
+            </a>
+            
+            <a href="#apropos" class="menu-item">
+                <i class="fas fa-user"></i> À propos
+            </a>
+            
+            <a href="#faq" class="menu-item">
+                <i class="fas fa-question-circle"></i> FAQ
+            </a>
+            
+            <!-- CTAs en bas du menu -->
+            <div class="menu-cta-container">
+                <a href="tel:0660875477" class="menu-cta menu-cta-secondary">
+                    <i class="fas fa-phone"></i> Appelez-moi : 06 60 87 54 77
+                </a>
+                
+                <a href="#contact" class="menu-cta menu-cta-primary">
+                    <i class="fas fa-rocket"></i> Devis Gratuit sous 24h
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Modern Hero Section -->
     <section class="hero" id="accueil">
@@ -1480,6 +1737,7 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/burger-menu.js"></script>
 
 </body>
 </html>

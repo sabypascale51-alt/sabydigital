@@ -1,0 +1,58 @@
+# Robots.txt pour SabyDigital
+# Site: https://sabydigital.netlify.app
+# Dernière mise à jour: 6 janvier 2026
+
+# Autoriser tous les robots d'exploration
+User-agent: *
+Allow: /
+
+# Pages à ne PAS indexer (si elles existent)
+Disallow: /admin/
+Disallow: /test/
+Disallow: /draft/
+Disallow: /temp/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /cgi-bin/
+
+# Bloquer les mauvais bots (spam, scraping)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Google Bot (autoriser explicitement)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing Bot (autoriser)
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Sitemap XML (IMPORTANT pour le SEO)
+Sitemap: https://sabydigital.netlify.app/sitemap.xml
+
+# Crawl-delay général (pour éviter la surcharge serveur)
+# 10 secondes entre chaque requête
+Crawl-delay: 10
+
+# Autoriser l'indexation des images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Autoriser l'indexation des CSS et JS (important pour le rendu)
+User-agent: Googlebot
+Allow: /*.css
+Allow: /*.js
+
+# Note: Netlify gère automatiquement les performances
+# Ce fichier optimise le crawl et l'indexation Google
