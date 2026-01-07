@@ -189,6 +189,19 @@ contactForm.addEventListener('submit', async (e) => {
         // Log form data (for demonstration)
         console.log('Form submitted:', data);
         
+        // 🎯 FACEBOOK PIXEL: Track Lead Event
+        if (typeof window.trackContactFormSubmit === 'function') {
+            window.trackContactFormSubmit({
+                email: data.email,
+                phone: data.phone,
+                firstName: data.name ? data.name.split(' ')[0] : '',
+                lastName: data.name ? data.name.split(' ').slice(1).join(' ') : '',
+                city: data.city || '',
+                department: data.department || '',
+                service: data.service || ''
+            });
+        }
+        
         // Show success message
         contactForm.style.display = 'none';
         formSuccess.classList.add('show');

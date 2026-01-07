@@ -134,14 +134,16 @@
     height: 100vh;
     background: var(--menu-bg);
     z-index: 999;
-    transform: translateX(100%);
+    transform: translateX(100%) !important;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
     padding-top: 80px;
+    visibility: hidden;
 }
 
 .menu-overlay.active {
-    transform: translateX(0);
+    transform: translateX(0) !important;
+    visibility: visible;
 }
 
 /* --- Menu Content --- */

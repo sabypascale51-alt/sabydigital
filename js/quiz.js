@@ -292,6 +292,16 @@ function showResults() {
     document.getElementById('resultsTitle').textContent = profile.title;
     document.getElementById('resultsDescription').textContent = profile.description;
     
+    // 🎯 FACEBOOK PIXEL: Track Quiz Completion
+    if (typeof window.trackQuizComplete === 'function') {
+        window.trackQuizComplete({
+            profile: profile.title,
+            score: finalScore,
+            recommendations: profile.recommendations.map(r => r.title).join(', '),
+            urgency: finalScore < 50 ? 'high' : finalScore < 75 ? 'medium' : 'low'
+        });
+    }
+    
     // Animate score
     animateScore(finalScore);
     
