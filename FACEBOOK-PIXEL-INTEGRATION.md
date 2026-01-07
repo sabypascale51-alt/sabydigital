@@ -2,7 +2,7 @@
 
 ## ✅ **Statut : Intégré et Opérationnel**
 
-**Pixel ID** : `61581661684149`  
+**Pixel ID** : `1133753102238894`  
 **Date d'intégration** : 6 janvier 2026  
 **Fichier principal** : `js/facebook-pixel.js` (8,4 KB)
 
@@ -116,7 +116,7 @@ if (typeof window.trackQuizComplete === 'function') {
 1. **Aller sur Events Manager** :
    - https://business.facebook.com/events_manager
 
-2. **Sélectionner votre pixel** : `61581661684149`
+2. **Sélectionner votre pixel** : `1133753102238894`
 
 3. **Onglet "Test Events"** :
    - Ouvrir votre site

@@ -2,7 +2,7 @@
 
 ## ✅ **STATUT : INTÉGRÉ ET OPÉRATIONNEL**
 
-**Pixel ID** : `61581661684149`  
+**Pixel ID** : `1133753102238894`  
 **Date** : 6 janvier 2026
 
 ---
@@ -48,7 +48,7 @@
 1. **Aller sur Events Manager** :
    - https://business.facebook.com/events_manager
 
-2. **Sélectionner votre pixel** : `61581661684149`
+2. **Sélectionner votre pixel** : `1133753102238894`
 
 3. **Onglet "Test Events"** :
    - Ouvrir votre site dans un autre onglet
@@ -68,7 +68,7 @@
 
 1. Aller sur https://business.facebook.com/audiences
 2. **Créer une audience** → **Audience personnalisée** → **Site web**
-3. Sélectionner votre pixel : `61581661684149`
+3. Sélectionner votre pixel : `1133753102238894`
 4. Événement : **PageView** → Derniers **30 jours**
 5. Nommer : **"SabyDigital - Visiteurs 30j"**
 6. ✅ Créer l'audience
@@ -78,7 +78,7 @@
 ### **Audience 2 : Prospects Chauds (Haute Priorité)**
 
 1. **Créer une audience** → **Audience personnalisée** → **Site web**
-2. Sélectionner votre pixel : `61581661684149`
+2. Sélectionner votre pixel : `1133753102238894`
 3. Événement : **Lead** OU **CompleteRegistration** → Derniers **30 jours**
 4. Nommer : **"SabyDigital - Prospects Chauds 30j"**
 5. ✅ Créer l'audience
@@ -88,7 +88,7 @@
 ### **Audience 3 : Clickers Téléphone (Très Chaud)**
 
 1. **Créer une audience** → **Audience personnalisée** → **Site web**
-2. Sélectionner votre pixel : `61581661684149`
+2. Sélectionner votre pixel : `1133753102238894`
 3. Événement : **Contact** → Contient "Phone" → Derniers **7 jours**
 4. Nommer : **"SabyDigital - Clickers Phone 7j"**
 5. ✅ Créer l'audience
@@ -137,7 +137,7 @@
    - Lien : https://sabydigital.netlify.app#contact
 
 5. **Événement d'optimisation** :
-   - Pixel : `61581661684149`
+   - Pixel : `1133753102238894`
    - Événement : **Lead**
    - ✅ Publier la campagne
 
@@ -267,6 +267,7 @@
 
 **Date** : 6 janvier 2026  
 **Statut** : ✅ **PRÊT À LANCER**  
+**Pixel ID** : `1133753102238894`  
 **Support** : Documentation complète disponible
 
 © 2026 SabyDigital — Facebook Pixel pour artisans IDF

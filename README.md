@@ -233,7 +233,7 @@ sabydigital/
 - ✅ **Images optimisées** (lazy loading, alt-text descriptif)
 
 ### ✅ **📊 Facebook Pixel - Tracking Avancé** *(Ajouté le 6 janvier 2026)*
-- ✅ **Pixel ID** : `61581661684149` (intégré et opérationnel)
+- ✅ **Pixel ID** : `1133753102238894` (intégré et opérationnel)
 - ✅ **Événements automatiques** : PageView, Contact (CTA, Phone, WhatsApp), ViewContent
 - ✅ **Événements de conversion** : Lead (formulaire), CompleteRegistration (quiz)
 - ✅ **Événements personnalisés** : QuizStarted, QuizProfileDetected

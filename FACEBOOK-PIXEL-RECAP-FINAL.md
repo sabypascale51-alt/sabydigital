@@ -4,12 +4,14 @@
 
 Le Facebook Pixel est **entièrement intégré** et **opérationnel** sur votre site SabyDigital.
 
+**Pixel ID** : `1133753102238894` ✅
+
 ---
 
 ## 📊 **Ce qui a été fait**
 
 ### ✅ **1. Pixel Intégré**
-- **Pixel ID** : `61581661684149`
+- **Pixel ID** : `1133753102238894` ✅
 - **Fichier créé** : `js/facebook-pixel.js` (8,4 KB)
 - **Intégré dans** : `index.html` (head section)
 - **Noscript fallback** : Image pixel 1×1 pour navigateurs sans JS
@@ -86,7 +88,7 @@ Le Facebook Pixel est **entièrement intégré** et **opérationnel** sur votre 
 
 ### **3. Vérifier dans Events Manager (5 min)**
 - https://business.facebook.com/events_manager
-- Sélectionner pixel `61581661684149`
+- Sélectionner pixel `1133753102238894`
 - Onglet **Test Events**
 - ✅ Voir les événements en temps réel
 
@@ -225,6 +227,7 @@ Le Facebook Pixel est **entièrement intégré** et **opérationnel** sur votre 
 
 **Date d'intégration** : 6 janvier 2026  
 **Statut** : ✅ **TERMINÉ ET OPÉRATIONNEL**  
+**Pixel ID** : `1133753102238894` ✅  
 **Prêt pour campagnes** : ✅ **OUI**  
 **ROI attendu** : **500-900%** 💰
 

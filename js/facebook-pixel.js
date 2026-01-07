@@ -1,6 +1,6 @@
 /* ========================================
    FACEBOOK PIXEL - SABYDIGITAL
-   Pixel ID: 61581661684149
+   Pixel ID: 1133753102238894
    ======================================== */
 
 // Initialize Facebook Pixel
@@ -13,7 +13,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '61581661684149');
+fbq('init', '1133753102238894');
 fbq('track', 'PageView');
 
 /* ========================================
@@ -189,7 +189,7 @@ window.trackPhoneCallClick = function() {
 // Cette fonction peut être appelée quand vous avez les données utilisateur
 window.setFacebookUserData = function(userData = {}) {
     if (typeof fbq !== 'undefined') {
-        fbq('init', '61581661684149', {
+        fbq('init', '1133753102238894', {
             em: userData.email || '',
             ph: userData.phone || '',
             fn: userData.firstName || '',
@@ -238,7 +238,7 @@ window.trackPackPurchase = function(orderId, packName = 'Pack Visibilité IDF') 
    CONSOLE LOG - DEBUG MODE
    ======================================== */
 
-console.log('✅ Facebook Pixel Loaded - ID: 61581661684149');
+console.log('✅ Facebook Pixel Loaded - ID: 1133753102238894');
 console.log('📊 Events configured: PageView, Lead, Contact, CompleteRegistration, ViewContent');
 console.log('🎯 Custom Events: QuizStarted, QuizProfileDetected');
 console.log('💰 Value tracking: 890€ (Pack Visibilité IDF)');
